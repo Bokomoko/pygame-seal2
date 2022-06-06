@@ -1,7 +1,5 @@
-
-
 import pygame
-from pygame.locals import* #
+from pygame.locals import * 
 import math, random, sys, os
 
 
@@ -203,14 +201,8 @@ class Game():
                         self.x = x + 10
                         self.y = y + 30
 
-
-
                 def draw_bullet(self):
-
-
-
                         tela.blit(bullet_img, (self.x, self.y))
-
 
                 def move(self):
                     if self.direction == 1:
@@ -595,8 +587,13 @@ def check_events(self):
 
 # INICIALIDADOR DO JOGO
 
-g = Game()
 
-while g.running:
+def main():
+  g = Game()
+
+  while g.running:
     g.curr_menu.display_menu()
     g.game_loop()
+
+if __name__ == "__main__":
+  main()
